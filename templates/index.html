@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Donut hub{% endblock %}
+{% block body %}
+
+    <div class="menu">
+      {% for donut in donuts %}
+      <div class="donut">
+        <h2>{{donut.name}}</h2>
+        <img src="{{ url_for('static', filename='img/'+donut.image) }}">
+        <p>
+         {{donut.description}}
+        </p>
+      </div>
+      {% endfor %} 
+
+      </div>
+    
+{% endblock %}
